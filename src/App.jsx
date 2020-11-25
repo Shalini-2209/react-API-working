@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Table, Alert } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   state = {
@@ -25,14 +27,28 @@ class App extends Component {
       return (
         <>
           <div>
-            <ul>
-              {items.map((item) => (
-                <li>
-                  "User_id": {item.userId} | title = {item.title}
-                </li>
-              ))}
-              ;
-            </ul>
+            <Alert variant="primary">
+              <center>TO DO LIST | SORTED</center>{" "}
+            </Alert>
+          </div>
+          <div>
+            <Table striped bordered hover variant="dark">
+              <thead>
+                <tr>
+                  <th>User Id</th>
+                  <th>Title</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((item) => (
+                  <tr>
+                    <td>{item.userId}</td>
+                    <td>{item.title}</td>
+                  </tr>
+                ))}
+                ;
+              </tbody>
+            </Table>
           </div>
         </>
       );
