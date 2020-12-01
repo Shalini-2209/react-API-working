@@ -23,13 +23,31 @@ const DataFetching = () => {
       <Alert variant="primary">
         <center>TO DO LIST | SORTED</center>{" "}
       </Alert>
-      <ul>
+      {/* <ul>
         {list.map((item) => (
           <li key={item.id}>
             {item.userId} {item.title}
           </li>
         ))}
-      </ul>
+      </ul> */}
+
+      <Table striped bordered hover variant="dark">
+        <thead>
+          <tr>
+            <th>User Id</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map((item) => (
+            <tr key={item.id}>
+              <td>{item.userId}</td>
+              <td>{item.title}</td>
+            </tr>
+          ))}
+          ;
+        </tbody>
+      </Table>
     </div>
   );
 };

@@ -43,7 +43,7 @@ class App extends Component {
               </thead>
               <tbody>
                 {items.map((item) => (
-                  <tr>
+                  <tr key={item.id}>
                     <td>{item.userId}</td>
                     <td>{item.title}</td>
                   </tr>
