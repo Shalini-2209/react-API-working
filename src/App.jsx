@@ -31,6 +31,8 @@ class App extends Component {
               <center>TO DO LIST | SORTED</center>{" "}
             </Alert>
           </div>
+          <br />
+          <br />
           <div>
             <Table striped bordered hover variant="dark">
               <thead>
