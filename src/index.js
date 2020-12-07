@@ -4,11 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import DataFetching from "./DataFetchingHooks";
+import DataFetchingUseReducer from "./DataFetchingUseReducer";
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <DataFetching />
+    {/* <DataFetching /> */}
+    <DataFetchingUseReducer />
   </React.StrictMode>,
   document.getElementById("root")
 );
